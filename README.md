@@ -9,7 +9,7 @@
 
 - **[Progresso](#progresso)**
 - **[Scripts](#scripts)**
-- **[Dependências](#dependencias)**
+- **[Dependências](#dependências)**
 # 
 # Progresso -
 
