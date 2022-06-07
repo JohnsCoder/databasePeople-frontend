@@ -7,9 +7,9 @@
 # Conteúdo -
 
 
-- **[Progresso](#Progresso)**
-- **[Scripts](#Scripts)**
-- **[Dependências](#Dependências)**
+- **[Progresso](#progresso)**
+- **[Scripts](#scripts)**
+- **[Dependências](#dependencias)**
 # 
 # Progresso -
 
@@ -30,7 +30,7 @@
     - Consumir rota /put
     - Consumir rota /delete
 # 
-# Scripts-
+# Scripts -
 
 Obs. para executar todos comandos corretamente confira se todas **[Dependências](#Dependências)** estão instaladas corretamente.
 
