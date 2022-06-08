@@ -17,6 +17,7 @@
 ### Loading…  33,3%
 
 - **~~DataBase~~**
+    - ~~Criar Schema~~
     - ~~Criar Tabela~~
 - **Back-End**
     - ~~Criar rota /get~~
