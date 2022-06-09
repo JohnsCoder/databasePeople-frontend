@@ -1,12 +1,27 @@
 import React from "react";
-import styles from '../styles/components/cards.module.css'
-const Cards = (props) => 
-<div className={styles.box}>
+import styles from "../styles/components/cards.module.css";
+import DialogWindow from "./dialog";
+const Cards = (props) => {
+  return (
+    <>
+      <DialogWindow
+        display={props.display}
+        closeWindow={props.closeWindow}
+        id={props.id}
+        first_name={props.first_name}
+        last_name={props.last_name}
+        email={props.email}
+        salary={props.salary}
+      />
+      <div className={styles.cards} onClick={props.showWindow}>
+        <span>
+          {props.first_name} {props.last_name}
+        </span>
+        <span>{props.email}</span>
+        <span>{props.salary}</span>
+      </div>
+    </>
+  );
+};
 
-     <span className={styles.name}>{props.name}</span>
-     <span className={styles.email}>{props.email}</span>
-     <span className={styles.salary}>{props.salary}</span>
-
-</div>
-
-export default Cards
+export default Cards;
