@@ -1,9 +1,16 @@
-.box {
+.cards {
      display: flex;
-     background-color: gray;
      width: 550px;
      justify-content: space-between;
+     background-color: #FAA916;
      margin: 10px auto;
      padding: 15px 50px;
      border-radius: 5px;
+     font-family: 'Roboto', sans-serif;
+     transition: all .5s;
+}
+
+.box:hover {
+     background-color: #faaa16a2;
+
 }
