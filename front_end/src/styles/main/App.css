@@ -1,12 +1,12 @@
 .App {
-  background-color: #FBFFFE;
+  background-color: #FFF4E4;
 }
 
 header {
   display: flex;
   height: 95px;
   width: 99vw;
-  background-color: #6D676E;
+  background-color: #0091AD;
   justify-content: space-between;
 }
 
@@ -22,13 +22,13 @@ header button {
   height: 60px;
   border: none;
   margin: auto 20px;
-  font-size: 50px;
-  border-radius: 10px;
-  background-color: #068D9D;
-  transition: all 0.5s;
+  font-size: 40px;
+  border-radius: 5px;
+  background-color: #FFF4E4;
+  transition: all 0.3s;
 }
 
 header button:hover {
-  background-color: #068e9dd0;
+  background-color: rgb(204, 194, 179);
   
 }
