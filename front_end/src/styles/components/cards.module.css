@@ -2,7 +2,7 @@
      display: flex;
      width: 550px;
      justify-content: space-between;
-     background-color: #FAA916;
+     background-color: #F7E8A4;
      margin: 10px auto;
      padding: 15px 50px;
      border-radius: 5px;
@@ -10,7 +10,7 @@
      transition: all .5s;
 }
 
-.box:hover {
-     background-color: #faaa16a2;
+.cards:hover {
+     background-color: #e9db9e;
 
 }

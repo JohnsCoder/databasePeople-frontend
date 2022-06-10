@@ -14,7 +14,7 @@
 # Progresso -
 
 
-### Loading…  33,3%
+### Loading…  81,8%
 
 - **~~DataBase~~**
     - ~~Criar Schema~~
@@ -22,13 +22,14 @@
 - **Back-End**
     - ~~Criar rota /get~~
     - ~~Criar rota /post~~
-    - Criar rota /put
+    - ~~Criar rota /put~~
     - Criar rota /delete
 - **Front-End**
     - ~~Criar interface~~
     - ~~Consumir rota /get~~
     - ~~Consumir rota /post~~
-    - Consumir rota /put
+    - ~~Melhorar Design e Animações~~
+    - ~~Consumir rota /put~~
     - Consumir rota /delete
 # 
 # Scripts -

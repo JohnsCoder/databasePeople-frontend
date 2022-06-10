@@ -1,19 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../styles/components/cards.module.css";
-import DialogWindow from "./dialog";
+import { EditDialogWindow } from "./dialog";
+// import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+// import { faPencil } from '@fortawesome/free-solid-svg-icons'
 const Cards = (props) => {
+  const [display, setDisplay] = useState("none");
+  const showWindow = () => setDisplay("block");
+  const closeWindow = () => setDisplay("none");
   return (
     <>
-      <DialogWindow
-        display={props.display}
-        closeWindow={props.closeWindow}
+      <EditDialogWindow
+        renderValue={props.renderValue}
+        display={display}
+        closeWindow={closeWindow}
         id={props.id}
         first_name={props.first_name}
         last_name={props.last_name}
         email={props.email}
         salary={props.salary}
       />
-      <div className={styles.cards} onClick={props.showWindow}>
+      <div className={styles.cards} onClick={showWindow}>
         <span>
           {props.first_name} {props.last_name}
         </span>

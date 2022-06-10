@@ -1,25 +1,11 @@
 import React, { useState } from "react";
 import Axios from "axios";
 import styles from "../styles/components/dialog.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus, faX, faTrashCan } from "@fortawesome/free-solid-svg-icons";
 
-function DialogWindow(props) {
-  const [values, setValues] = useState({
-    id: props.id,
-    first_name: props.first_name,
-    last_name: props.last_name,
-    email: props.email,
-    salary: props.salary,
-  });
-  
-  // {
-  //   typeof(props.id) !== "undefined" && setValues({
-  //         id: props.id,
-  //         first_name: props.first_name,
-  //         last_name: props.last_name,
-  //         email: props.email,
-  //         salary: props.salary,
-  //       })
-  // }
+function CreateDialogWindow(props) {
+  const [values, setValues] = useState();
 
   function getValue(prop) {
     setValues((defaultValues) => ({
@@ -28,62 +14,168 @@ function DialogWindow(props) {
     }));
   }
 
-  function sendValue() {
+  function postValue() {
     Axios.post("http://localhost:3001/postUsers", {
       first_name: values.first_name,
       last_name: values.last_name,
       email: values.email,
       salary: values.salary,
       password_hash: values.password,
-    });
+    }).then(props.renderValue());
     props.closeWindow();
   }
 
   return (
-    <div className={styles.container} style={{ display: props.display }}>
-      <div>
-        <input
-          type="text"
-          placeholder="Primeiro Nome..."
-          onChange={getValue}
-          alt="first_name"
-          defaultValue={props.first_name}
-        />
-        <input
-          type="text"
-          placeholder="Ultimo Nome..."
-          onChange={getValue}
-          alt="last_name"
-          defaultValue={props.last_name}
-        />
-        <input
-          type="text"
-          placeholder="Email..."
-          onChange={getValue}
-          alt="email"
-          defaultValue={props.email}
-        />
-        <input
-          type="text"
-          placeholder="Salário..."
-          onChange={getValue}
-          alt="salary"
-          defaultValue={props.salary}
-        />
-        <input
-          type="text"
-          placeholder="senha..."
-          onChange={getValue}
-          alt="password"
-          defaultValue={props.editValue}
-        />
-      </div>
-      <div>
-        <button onClick={props.closeWindow}> x </button>
-        <button onClick={sendValue}> + </button>
+    <div
+      className={styles.container}
+      style={{ display: props.display }}
+    >
+      <div className={styles.form} style={{ height: "580px" }}>
+        <div>
+          <label>Primeiro Nome:</label>
+          <input
+            type="text"
+            placeholder="Ex. Mario"
+            onChange={getValue}
+            alt="first_name"
+            defaultValue={props.first_name}
+          />
+
+          <label>Ultimo Nome:</label>
+          <input
+            type="text"
+            placeholder="Ex. Júnior"
+            onChange={getValue}
+            alt="last_name"
+            defaultValue={props.last_name}
+          />
+
+          <label>Email:</label>
+          <input
+            type="text"
+            placeholder="Ex. carlos@email.com"
+            onChange={getValue}
+            alt="email"
+            defaultValue={props.email}
+          />
+
+          <label>Salário:</label>
+          <input
+            type="text"
+            placeholder="Ex. 5630"
+            onChange={getValue}
+            alt="salary"
+            defaultValue={props.salary}
+          />
+
+          <label>Senha:</label>
+          <input
+            type="text"
+            placeholder="Ex. 58450matheus"
+            onChange={getValue}
+            alt="password"
+            defaultValue={props.editValue}
+          />
+        </div>
+        <div>
+          <button onClick={props.closeWindow}>
+            <FontAwesomeIcon icon={faX} />
+          </button>
+          <button onClick={postValue}>
+            <FontAwesomeIcon icon={faPlus} />
+          </button>
+        </div>
       </div>
     </div>
   );
 }
 
-export default DialogWindow;
+function EditDialogWindow(props) {
+  const [values, setValues] = useState({
+    id: props.id,
+    first_name: props.first_name,
+    last_name: props.last_name,
+    email: props.email,
+    salary: props.salary,
+  });
+
+  function editValue(prop) {
+    setValues((defaultValues) => ({
+      ...defaultValues,
+      [prop.target.alt]: prop.target.value,
+    }));
+  }
+
+  function updateValue() {
+    Axios.put("http://localhost:3001/editUsers", {
+      id: values.id,
+      first_name: values.first_name,
+      last_name: values.last_name,
+      email: values.email,
+      salary: values.salary,
+      password_hash: values.password,
+    });
+    props.renderValue();
+    props.closeWindow();
+  }
+
+  function delValue() {
+    props.closeWindow();
+  }
+
+  return (
+    <div className={styles.container} style={{ display: props.display }}>
+      <div className={styles.form}>
+        <div>
+          <label>Primeiro Nome:</label>
+          <input
+            type="text"
+            placeholder="Ex. Mario"
+            onChange={editValue}
+            alt="first_name"
+            defaultValue={props.first_name}
+          />
+
+          <label>Ultimo Nome:</label>
+          <input
+            type="text"
+            placeholder="Ex. Júnior"
+            onChange={editValue}
+            alt="last_name"
+            defaultValue={props.last_name}
+          />
+
+          <label>Email:</label>
+          <input
+            type="text"
+            placeholder="Ex. carlos@email.com"
+            onChange={editValue}
+            alt="email"
+            defaultValue={props.email}
+          />
+
+          <label>Salário:</label>
+          <input
+            type="text"
+            placeholder="Ex. 5630"
+            onChange={editValue}
+            alt="salary"
+            defaultValue={props.salary}
+          />
+        </div>
+        <div>
+          <button onClick={props.closeWindow}>
+            <FontAwesomeIcon icon={faX} />
+          </button>
+          <button onClick={delValue}>
+            <FontAwesomeIcon icon={faTrashCan} />
+          </button>
+          <button onClick={updateValue}>
+            <FontAwesomeIcon icon={faPlus} />
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+export { CreateDialogWindow, EditDialogWindow };
