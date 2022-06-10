@@ -7,9 +7,9 @@
 # Conteúdo -
 
 
-- **[Progresso](#progresso)**
-- **[Scripts](#scripts)**
-- **[Dependências](#dependencias)**
+- **[Progresso](#progresso--)**
+- **[Scripts](#scripts--)**
+- **[Dependências](#dependências--)**
 # 
 # Progresso -
 
@@ -17,6 +17,7 @@
 ### Loading…  81,8%
 
 - **~~DataBase~~**
+    - ~~Criar Schema~~
     - ~~Criar Tabela~~
 - **Back-End**
     - ~~Criar rota /get~~
