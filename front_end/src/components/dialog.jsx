@@ -21,7 +21,9 @@ function CreateDialogWindow(props) {
       email: values.email,
       salary: values.salary,
       password_hash: values.password,
-    }).then(props.renderValue());
+    })
+    props.renderValue()
+    props.renderValue()
     props.closeWindow();
   }
 
@@ -38,7 +40,7 @@ function CreateDialogWindow(props) {
             placeholder="Ex. Mario"
             onChange={getValue}
             alt="first_name"
-            defaultValue={props.first_name}
+            defaultValue={""}
           />
 
           <label>Ultimo Nome:</label>
@@ -47,7 +49,7 @@ function CreateDialogWindow(props) {
             placeholder="Ex. Júnior"
             onChange={getValue}
             alt="last_name"
-            defaultValue={props.last_name}
+            defaultValue={""}
           />
 
           <label>Email:</label>
@@ -56,7 +58,7 @@ function CreateDialogWindow(props) {
             placeholder="Ex. carlos@email.com"
             onChange={getValue}
             alt="email"
-            defaultValue={props.email}
+            defaultValue={""}
           />
 
           <label>Salário:</label>
@@ -65,7 +67,7 @@ function CreateDialogWindow(props) {
             placeholder="Ex. 5630"
             onChange={getValue}
             alt="salary"
-            defaultValue={props.salary}
+            defaultValue={""}
           />
 
           <label>Senha:</label>
@@ -74,7 +76,7 @@ function CreateDialogWindow(props) {
             placeholder="Ex. 58450matheus"
             onChange={getValue}
             alt="password"
-            defaultValue={props.editValue}
+            defaultValue={""}
           />
         </div>
         <div>
@@ -89,6 +91,15 @@ function CreateDialogWindow(props) {
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
 
 function EditDialogWindow(props) {
   const [values, setValues] = useState({
@@ -120,6 +131,9 @@ function EditDialogWindow(props) {
   }
 
   function delValue() {
+    Axios.delete(`http://localhost:3001/delUsers/${values.id}`)
+    props.renderValue();
+    props.renderValue();
     props.closeWindow();
   }
 

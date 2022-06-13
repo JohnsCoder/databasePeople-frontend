@@ -7,14 +7,14 @@
 # Conteúdo -
 
 
-- **[Progresso](#progresso)**
-- **[Scripts](#scripts)**
-- **[Dependências](#dependencias)**
+- **[Progresso](#progresso--)**
+- **[Scripts](#scripts--)**
+- **[Dependências](#dependencias--)**
 # 
 # Progresso -
 
 
-### Loading…  81,8%
+### Loading… 100%
 
 - **~~DataBase~~**
     - ~~Criar Tabela~~
@@ -22,14 +22,18 @@
     - ~~Criar rota /get~~
     - ~~Criar rota /post~~
     - ~~Criar rota /put~~
-    - Criar rota /delete
+    - ~~Criar rota /delete~~
 - **Front-End**
     - ~~Criar interface~~
     - ~~Consumir rota /get~~
     - ~~Consumir rota /post~~
     - ~~Melhorar Design e Animações~~
     - ~~Consumir rota /put~~
-    - Consumir rota /delete
+    - ~~Consumir rota /delete~~
+# 
+- **Outros**
+    - Encriptar Senhas
+    - Adicionar Autenticação
 # 
 # Scripts -
 
@@ -66,7 +70,7 @@ yarn start
 ```
 
 # 
-# Dependências -
+# Tecnolôgias -
 
 
 - **[Docker](https://www.docker.com/get-started/)**
@@ -74,3 +78,10 @@ yarn start
 - [N**ode.js**](https://nodejs.org/en/)
 - **[yarn](https://yarnpkg.com/getting-started/install)**
 - **[git](https://git-scm.com/downloads)**
+
+#
+## Bibliotecas -
+- **Nodemon**
+- **Axios**
+- **Express**
+- **FontAwesome**
