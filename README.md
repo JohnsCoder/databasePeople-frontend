@@ -5,11 +5,9 @@
 **Node.js | React.js | MySQL** 
 # 
 # Conteúdo -
-
-
 - **[Progresso](#progresso--)**
 - **[Scripts](#scripts--)**
-- **[Dependências](#dependencias--)**
+- **[Dependências](#dependências--)**
 # 
 # Progresso -
 
@@ -17,6 +15,7 @@
 ### Loading… 100%
 
 - **~~DataBase~~**
+    - ~~Criar Schema~~
     - ~~Criar Tabela~~
 - **Back-End**
     - ~~Criar rota /get~~
