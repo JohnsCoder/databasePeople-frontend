@@ -1,7 +1,10 @@
 {
-  "name": "phone-book-frontend",
+  "name": "database-people-frontend",
   "version": "0.1.0",
   "private": true,
+  "repository": "https://github.com/JohnsCoder/databasePeople-frontend.git",
+  "author": "JohnsCoder <joaopdossantos1515@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",

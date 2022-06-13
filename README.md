@@ -1,9 +1,9 @@
-# PhoneBook
+# DataBase People
 
-### Lista Telefônica.
+### CRUD - Lista Telefônica
 **FRONTEND**
 
-Veja a outra parte do projeto: **[phone-book-backend](https://github.com/JohnsCoder/phone-book-backend)**
+Veja a outra parte do projeto: **[phone-book-backend](https://github.com/JohnsCoder/databasePeople-backend)**
 
 **| React.js |** 
 # 
