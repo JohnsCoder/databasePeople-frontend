@@ -15,7 +15,6 @@ function App() {
 
   function renderValue() {
     Axios.get("http://localhost:3001/getUsers").then((res) => {
-      console.log("foi");
       setData(res.data);
     });
   }

@@ -12,10 +12,12 @@ let db = mysql.createConnection({
   database: "js_data",
 });
 
+db.connect();
+
 app.use(express.json());
 app.use(cors());
 
-app.get("/getUsers", (req, res) => {
+app.get("/getUsers", ({}, res) => {
   db.query(
     "SELECT id, first_name, last_name, email, salary FROM users ORDER BY first_name ASC",
     (err, result) => {
@@ -42,6 +44,15 @@ app.post("/postUsers", (req, res) => {
   );
 });
 
+app.delete("/delUsers/:id", (req, res) => {
+  db.query("DELETE FROM users WHERE id = ?",[req.params.id],
+  (err, result ) => {
+    if(err) throw err;
+   res.send(result) 
+  }
+  )
+})
+
 app.put("/editUsers", (req, res) => {
   db.query(
     "UPDATE users SET first_name = ?, last_name = ?, email = ?, salary = ? WHERE id = ?",
@@ -54,7 +65,8 @@ app.put("/editUsers", (req, res) => {
     ],
     (err, result) => {
       if (err) throw err;
-      console.log(result);
+      console.log(req.body)
+      res.send(result);
     }
   );
 });
@@ -63,5 +75,7 @@ app.listen(3001, () => {
   console.log({
     get: "http://localhost:3001/getUsers",
     post: "http://localhost:3001/postUsers",
+    post: "http://localhost:3001/editUsers",
+    post: "http://localhost:3001/delUsers"
   });
 });
