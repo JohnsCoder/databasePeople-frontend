@@ -7,7 +7,7 @@
 # Conteúdo -
 - **[Progresso](#progresso--)**
 - **[Scripts](#scripts--)**
-- **[Tecnolôgias](#tecnologias--)**
+- **[Tecnologias](#tecnologias--)**
 # 
 # Progresso -
 
@@ -69,7 +69,7 @@ yarn start
 ```
 
 # 
-# Tecnolôgias -
+# Tecnologias -
 
 
 - **[Docker](https://www.docker.com/get-started/)**
