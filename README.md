@@ -59,5 +59,6 @@ yarn start
 
 #
 ## Bibliotecas -
-- **FontAwesome**
+- **Axios**
 - **js-sha256**
+- **FontAwesome**
