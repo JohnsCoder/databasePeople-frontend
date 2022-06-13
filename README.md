@@ -7,7 +7,7 @@
 # Conteúdo -
 - **[Progresso](#progresso--)**
 - **[Scripts](#scripts--)**
-- **[Dependências](#dependências--)**
+- **[Dependências](#dependencias--)**
 # 
 # Progresso -
 
