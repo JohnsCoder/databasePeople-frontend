@@ -3,6 +3,8 @@ import Axios from "axios";
 import styles from "../styles/components/dialog.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faX, faTrashCan } from "@fortawesome/free-solid-svg-icons";
+import {sha256} from 'js-sha256'
+
 
 function CreateDialogWindow(props) {
   const [values, setValues] = useState();
@@ -20,7 +22,7 @@ function CreateDialogWindow(props) {
       last_name: values.last_name,
       email: values.email,
       salary: values.salary,
-      password_hash: values.password,
+      password_hash: sha256(values.password),
     })
     props.renderValue()
     props.renderValue()

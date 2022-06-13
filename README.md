@@ -1,27 +1,23 @@
-# MyAPI
+# PhoneBook
 
-### Este projeto com o objetivo de demonstrar habilidade back-end, front-end e database.
+### Lista Telefônica.
+**FRONTEND**
 
-**Node.js | React.js | MySQL** 
+Veja a outra parte do projeto: **[phone-book-backend](https://github.com/JohnsCoder/phone-book-backend)**
+
+**| React.js |** 
 # 
 # Conteúdo -
 - **[Progresso](#progresso--)**
 - **[Scripts](#scripts--)**
-- **[Tecnologias](#tecnologias--)**
+- **[Dependências](#dependencias--)**
 # 
 # Progresso -
 
 
-### Loading… 100%
+### Loading… 110%
 
-- **~~DataBase~~**
-    - ~~Criar Schema~~
-    - ~~Criar Tabela~~
-- **Back-End**
-    - ~~Criar rota /get~~
-    - ~~Criar rota /post~~
-    - ~~Criar rota /put~~
-    - ~~Criar rota /delete~~
+
 - **Front-End**
     - ~~Criar interface~~
     - ~~Consumir rota /get~~
@@ -31,34 +27,17 @@
     - ~~Consumir rota /delete~~
 # 
 - **Outros**
-    - Encriptar Senhas
+    - ~~Encriptar Senhas~~
     - Adicionar Autenticação
 # 
 # Scripts -
 
-Obs. para executar todos comandos corretamente confira se todas **[Dependências](#Dependências)** estão instaladas corretamente.
-
-
-
-instale o MySQL -
-
-```bash
-docker pull mysql
-```
-
-abra o MySQL Workbench e execute os arquivos em myAPI/database/ -
+Obs. para executar todos comandos corretamente confira se todas **[Dependências](#dependencias--)** estão instaladas corretamente.
 
 instale as dependências do projeto -
 
 ```bash
 yarn 
-
-```
-
-inicie o back-end -
-
-```bash
-yarn dev
 
 ```
 
@@ -69,18 +48,16 @@ yarn start
 ```
 
 # 
-# Tecnologias -
+# Dependências -
 
 
 - **[Docker](https://www.docker.com/get-started/)**
-- [M**ySQL Workbench**](https://dev.mysql.com/downloads/workbench/)
-- [N**ode.js**](https://nodejs.org/en/)
+- **[MySQL Workbench](https://dev.mysql.com/downloads/workbench/)**
+- **[Node.js](https://nodejs.org/en/)**
 - **[yarn](https://yarnpkg.com/getting-started/install)**
 - **[git](https://git-scm.com/downloads)**
 
 #
 ## Bibliotecas -
-- **Nodemon**
-- **Axios**
-- **Express**
 - **FontAwesome**
+- **js-sha256**
