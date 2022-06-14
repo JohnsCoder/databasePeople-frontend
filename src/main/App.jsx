@@ -14,7 +14,7 @@ function App() {
   const closeWindow = () => setDisplay("none");
 
   function renderValue() {
-    Axios.get("http://localhost:3001/getUsers").then((res) => {
+    Axios.get("https://data-base-people.herokuapp.com/getUsers").then((res) => {
       setData(res.data);
     });
   }

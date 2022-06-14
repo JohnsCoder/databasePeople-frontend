@@ -17,7 +17,7 @@ function CreateDialogWindow(props) {
   }
 
   function postValue() {
-    Axios.post("http://localhost:3001/postUsers", {
+    Axios.post("https://data-base-people.herokuapp.com/postUsers", {
       first_name: values.first_name,
       last_name: values.last_name,
       email: values.email,
@@ -120,7 +120,7 @@ function EditDialogWindow(props) {
   }
 
   function updateValue() {
-    Axios.put("http://localhost:3001/editUsers", {
+    Axios.put("https://data-base-people.herokuapp.com/editUsers", {
       id: values.id,
       first_name: values.first_name,
       last_name: values.last_name,
@@ -133,7 +133,7 @@ function EditDialogWindow(props) {
   }
 
   function delValue() {
-    Axios.delete(`http://localhost:3001/delUsers/${values.id}`)
+    Axios.delete(`https://data-base-people.herokuapp.com/${values.id}`)
     props.renderValue();
     props.renderValue();
     props.closeWindow();
