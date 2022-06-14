@@ -1,11 +1,10 @@
 import "../styles/main/App.css";
 import React, { useEffect, useState } from "react";
-import Axios from "axios";
 import Cards from "../components/cards";
 import { CreateDialogWindow } from "../components/dialog";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
-
+import api from "../services/api";
 function App() {
   const [data, setData] = useState();
   const [display, setDisplay] = useState("none");
@@ -14,7 +13,7 @@ function App() {
   const closeWindow = () => setDisplay("none");
 
   function renderValue() {
-    Axios.get("https://data-base-people.herokuapp.com/getUsers").then((res) => {
+    api.get("users").then((res) => {
       setData(res.data);
     });
   }

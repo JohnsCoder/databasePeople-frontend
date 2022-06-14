@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Axios from "axios";
+import api from '../services/api'
 import styles from "../styles/components/dialog.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faX, faTrashCan } from "@fortawesome/free-solid-svg-icons";
@@ -17,7 +17,7 @@ function CreateDialogWindow(props) {
   }
 
   function postValue() {
-    Axios.post("https://data-base-people.herokuapp.com/postUsers", {
+    api.post("newUsers", {
       first_name: values.first_name,
       last_name: values.last_name,
       email: values.email,
@@ -120,7 +120,7 @@ function EditDialogWindow(props) {
   }
 
   function updateValue() {
-    Axios.put("https://data-base-people.herokuapp.com/editUsers", {
+    api.put("editUsers", {
       id: values.id,
       first_name: values.first_name,
       last_name: values.last_name,
@@ -133,7 +133,7 @@ function EditDialogWindow(props) {
   }
 
   function delValue() {
-    Axios.delete(`https://data-base-people.herokuapp.com/${values.id}`)
+    api.delete(`delUsers/${values.id}`)
     props.renderValue();
     props.renderValue();
     props.closeWindow();
