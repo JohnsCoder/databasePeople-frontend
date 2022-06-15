@@ -129,6 +129,7 @@ function EditDialogWindow(props) {
       password_hash: values.password,
     });
     props.renderValue();
+    props.renderValue();
     props.closeWindow();
   }
 
