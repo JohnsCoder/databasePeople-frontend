@@ -30,6 +30,7 @@ function App() {
           <FontAwesomeIcon icon={faPlus} />
         </button>
       </header>
+      <div className="cards">
       {typeof data !== "undefined" &&
         data.map((e) => {
           return (
@@ -45,6 +46,7 @@ function App() {
             />
           );
         })}
+        </div>
       <CreateDialogWindow
         display={display}
         closeWindow={closeWindow}
