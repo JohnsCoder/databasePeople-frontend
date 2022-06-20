@@ -8,7 +8,8 @@ import api from "../services/api";
 function App() {
   const [data, setData] = useState();
   const [display, setDisplay] = useState("none");
-
+  const [amountCards, setAmountCards] = useState(Math.floor((window.innerHeight) / 65));
+  console.log(amountCards)
   const showWindow = () => setDisplay("block");
   const closeWindow = () => setDisplay("none");
 
@@ -32,24 +33,9 @@ function App() {
       </header>
       {typeof data === "undefined" ? (
         <div className="loading skeleton">
-         <div></div>
-         <div></div>
-         <div></div>
-         <div></div>
-         <div></div>
-         <div></div>
-         <div></div>
-         <div></div>
-         <div></div>
-         <div></div>
-         <div></div>
-         <div></div>
-         <div></div>
-         <div></div>
-         <div></div>
-         <div></div>
-         <div></div>
-         <div></div>
+          {[...Array(amountCards)].map((e) => <div></div>
+
+          )}
         </div>
       ) : (
         <div className="cards">
