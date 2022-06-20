@@ -1,13 +1,13 @@
 .cards {
      display: flex;
-     width: 550px;
      justify-content: space-between;
      background-color: #F7E8A4;
-     margin: 10px auto;
+     margin: 10px 0;
      padding: 15px 50px;
      border-radius: 5px;
      font-family: 'Roboto', sans-serif;
      transition: all .5s;
+     overflow: hidden;
 }
 
 .cards:hover {

@@ -8,7 +8,8 @@ import api from "../services/api";
 function App() {
   const [data, setData] = useState();
   const [display, setDisplay] = useState("none");
-
+  const [amountCards, setAmountCards] = useState(Math.floor((window.innerHeight) / 65));
+  console.log(amountCards)
   const showWindow = () => setDisplay("block");
   const closeWindow = () => setDisplay("none");
 
@@ -17,7 +18,7 @@ function App() {
       setData(res.data);
     });
   }
-
+  console.log(data);
   useEffect(() => {
     renderValue();
   }, []);
@@ -30,21 +31,31 @@ function App() {
           <FontAwesomeIcon icon={faPlus} />
         </button>
       </header>
-      {typeof data !== "undefined" &&
-        data.map((e) => {
-          return (
-            <Cards
-              renderValue={renderValue}
-              showWindow={showWindow}
-              key={e.id}
-              id={e.id}
-              first_name={e.first_name}
-              last_name={e.last_name}
-              email={e.email}
-              salary={e.salary}
-            />
-          );
-        })}
+      {typeof data === "undefined" ? (
+        <div className="loading skeleton">
+          {[...Array(amountCards)].map((e) => <div></div>
+
+          )}
+        </div>
+      ) : (
+        <div className="cards">
+          {data.map((e) => {
+            return (
+              <Cards
+                renderValue={renderValue}
+                showWindow={showWindow}
+                key={e.id}
+                id={e.id}
+                first_name={e.first_name}
+                last_name={e.last_name}
+                email={e.email}
+                salary={e.salary}
+              />
+            );
+          })}
+        </div>
+      )}
+
       <CreateDialogWindow
         display={display}
         closeWindow={closeWindow}
