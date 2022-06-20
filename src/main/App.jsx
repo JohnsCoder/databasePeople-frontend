@@ -8,8 +8,7 @@ import api from "../services/api";
 function App() {
   const [data, setData] = useState();
   const [display, setDisplay] = useState("none");
-  const [amountCards, setAmountCards] = useState(Math.floor((window.innerHeight) / 65));
-  console.log(amountCards)
+  const amountCards = Math.floor((window.innerHeight) / 65)
   const showWindow = () => setDisplay("block");
   const closeWindow = () => setDisplay("none");
 
@@ -18,7 +17,6 @@ function App() {
       setData(res.data);
     });
   }
-  console.log(data);
   useEffect(() => {
     renderValue();
   }, []);
@@ -33,7 +31,7 @@ function App() {
       </header>
       {typeof data === "undefined" ? (
         <div className="loading skeleton">
-          {[...Array(amountCards)].map((e) => <div></div>
+          {[...Array(amountCards)].map((e, y) => <div key={y}></div>
 
           )}
         </div>

@@ -52,15 +52,10 @@ header button:hover {
 }
 .loading div{
   display: flex;
-  justify-content: space-between;
-  /* background-color: #F7E8A4; */
   height: 19px;
   margin: 10px 0;
   padding: 15px 50px;
   border-radius: 5px;
-  font-family: 'Roboto', sans-serif;
-  transition: all .5s;
-  overflow: hidden;
 }
 
 .skeleton div{
