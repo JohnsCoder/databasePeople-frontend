@@ -43,3 +43,16 @@ header button:hover {
   margin: auto;
   overflow: hidden;
 }
+
+.loading {
+  width: 400px;
+  height: 400px;
+  background: black;
+  color: white;
+  margin: 100px auto;
+
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  
+}

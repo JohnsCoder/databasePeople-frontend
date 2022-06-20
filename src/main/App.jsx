@@ -30,23 +30,31 @@ function App() {
           <FontAwesomeIcon icon={faPlus} />
         </button>
       </header>
-      <div className="cards">
-      {typeof data !== "undefined" &&
-        data.map((e) => {
-          return (
-            <Cards
-              renderValue={renderValue}
-              showWindow={showWindow}
-              key={e.id}
-              id={e.id}
-              first_name={e.first_name}
-              last_name={e.last_name}
-              email={e.email}
-              salary={e.salary}
-            />
-          );
-        })}
-        </div>
+{
+<div className="cards">
+ {typeof data !== "undefined" &&
+   data.map((e) => {
+     return (
+       <Cards
+         renderValue={renderValue}
+         showWindow={showWindow}
+         key={e.id}
+         id={e.id}
+         first_name={e.first_name}
+         last_name={e.last_name}
+         email={e.email}
+         salary={e.salary}
+       />
+     );
+   })}
+   </div>
+ ||
+ <div className="loading">Loading...</div>
+}
+
+     
+
+
       <CreateDialogWindow
         display={display}
         closeWindow={closeWindow}
