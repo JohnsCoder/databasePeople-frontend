@@ -31,12 +31,11 @@ header button {
 }
 
 header button:hover {
-  background-color: rgb(204, 194, 179);
+  background-color: #ccc2b3;
   
 }
 
 .cards {
-  /* display: ; */
   width: 80vw;
 
   min-width: fit-content;
@@ -45,14 +44,41 @@ header button:hover {
 }
 
 .loading {
-  width: 400px;
-  height: 400px;
-  background: black;
-  color: white;
-  margin: 100px auto;
+  width: 80vw;
 
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  
+  min-width: fit-content;
+  margin: auto;
+  overflow: hidden;
+}
+.loading div{
+  display: flex;
+  justify-content: space-between;
+  /* background-color: #F7E8A4; */
+  height: 12px;
+  margin: 10px 0;
+  padding: 15px 50px;
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+  transition: all .5s;
+  overflow: hidden;
+}
+
+.skeleton div{
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeHolderShimmer;
+  animation-timing-function: linear;
+  background: linear-gradient(to right, #f3e9da 8%, #fff4bd 60%, #f3e9da 90%);
+  background-size: 800px 104px;
+  position: relative;
+}
+
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: -800px 0
+  }
+  100% {
+    background-position: 800px 0
+  }
 }

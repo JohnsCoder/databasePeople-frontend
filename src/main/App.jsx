@@ -17,7 +17,7 @@ function App() {
       setData(res.data);
     });
   }
-
+  console.log(data);
   useEffect(() => {
     renderValue();
   }, []);
@@ -30,30 +30,45 @@ function App() {
           <FontAwesomeIcon icon={faPlus} />
         </button>
       </header>
-{
-<div className="cards">
- {typeof data !== "undefined" &&
-   data.map((e) => {
-     return (
-       <Cards
-         renderValue={renderValue}
-         showWindow={showWindow}
-         key={e.id}
-         id={e.id}
-         first_name={e.first_name}
-         last_name={e.last_name}
-         email={e.email}
-         salary={e.salary}
-       />
-     );
-   })}
-   </div>
- ||
- <div className="loading">Loading...</div>
-}
-
-     
-
+      {typeof data === "undefined" ? (
+        <div className="loading skeleton">
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+        </div>
+      ) : (
+        <div className="cards">
+          {data.map((e) => {
+            return (
+              <Cards
+                renderValue={renderValue}
+                showWindow={showWindow}
+                key={e.id}
+                id={e.id}
+                first_name={e.first_name}
+                last_name={e.last_name}
+                email={e.email}
+                salary={e.salary}
+              />
+            );
+          })}
+        </div>
+      )}
 
       <CreateDialogWindow
         display={display}
