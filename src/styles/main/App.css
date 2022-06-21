@@ -4,6 +4,51 @@
   min-height: 100vh;
 }
 
+@media (min-width:768px) {
+  header span{
+    margin: auto 0 auto 10px;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 3.5em;
+  
+  }
+
+  header button {
+    margin: auto 40px auto 0px;
+    height: 60px;
+    border: none;
+    width: 60px;
+    font-size: 40px;
+    border-radius: 5px;
+    background-color: #FFF4E4;
+    transition: all 0.3s;
+  }
+  
+  header button:hover {
+    background-color: #ccc2b3;
+    
+  }
+}
+
+@media (max-width:767px) {
+  header span{
+    margin: auto 0 auto 10px;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 8vw;
+  
+  }
+
+  header button {
+    margin: auto 20px auto 0;
+    height: 45px;
+    width: 45px;
+    border: none;
+    font-size: 30px;
+    border-radius: 5px;
+    background-color: #FFF4E4;
+    transition: all 0.3s;
+  }
+
+}
 header {
   display: flex;
   height: 95px;
@@ -12,36 +57,10 @@ header {
   justify-content: space-between;
 }
 
-header span{
-  margin-left: 17px;
-  font-family: 'Kdam Thmor Pro', sans-serif;
-  font-size: 3.5em;
 
-}
 
-header button {
-  width: 60px;
-  height: 60px;
-  border: none;
-  margin: auto 30px;
-  font-size: 40px;
-  border-radius: 5px;
-  background-color: #FFF4E4;
-  transition: all 0.3s;
-}
 
-header button:hover {
-  background-color: #ccc2b3;
-  
-}
 
-.cards {
-  width: 80vw;
-
-  min-width: fit-content;
-  margin: auto;
-  overflow: hidden;
-}
 
 .loading {
   width: 80vw;
