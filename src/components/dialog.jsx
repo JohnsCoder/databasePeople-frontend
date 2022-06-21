@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import api from '../services/api'
 import styles from "../styles/components/dialog.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus, faX, faTrashCan } from "@fortawesome/free-solid-svg-icons";
+import { faPlus, faX, faTrashCan, faCheck } from "@fortawesome/free-solid-svg-icons";
 import {sha256} from 'js-sha256'
 
 
@@ -188,7 +188,7 @@ function EditDialogWindow(props) {
             <FontAwesomeIcon icon={faTrashCan} />
           </button>
           <button onClick={updateValue}>
-            <FontAwesomeIcon icon={faPlus} />
+            <FontAwesomeIcon icon={faCheck} />
           </button>
         </div>
       </div>
