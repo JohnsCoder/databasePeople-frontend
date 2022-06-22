@@ -3,52 +3,52 @@
 ### CRUD - Lista Telefônica
 **FRONTEND**
 
-Veja a outra parte do projeto: **[phone-book-backend](https://github.com/JohnsCoder/databasePeople-backend)**
+See the other part here: **[phone-book-backend](https://github.com/JohnsCoder/databasePeople-backend)**
 
 **| React.js |** 
 # 
-# Conteúdo -
-- **[Progresso](#progresso--)**
+# Summary -
+- **[Progress](#progress--)**
 - **[Scripts](#scripts--)**
-- **[Dependências](#dependencias--)**
+- **[Dependencies](#dependencies--)**
 # 
-# Progresso -
+# Progress -
 
 
 ### Loading… 110%
 
 
 - **Front-End**
-    - ~~Criar interface~~
-    - ~~Consumir rota /get~~
-    - ~~Consumir rota /post~~
-    - ~~Melhorar Design e Animações~~
-    - ~~Consumir rota /put~~
-    - ~~Consumir rota /delete~~
+    - ~~Create interface~~
+    - ~~Consume **get** route~~
+    - ~~Consume **post** route~~
+    - ~~Improve Design and Animations~~
+    - ~~Consume **put** route~~
+    - ~~Consume **delete** route~~
 # 
 - **Outros**
-    - ~~Encriptar Senhas~~
-    - Adicionar Autenticação
+    - ~~Encrypt password~~
+    - Add Authentication
 # 
 # Scripts -
 
-Obs. para executar todos comandos corretamente confira se todas **[Dependências](#dependencias--)** estão instaladas corretamente.
+Note. to execute all the comands, first check if all **[Dependencies](#dependencies--)** were installed correctly.
 
-instale as dependências do projeto -
+install all project dependencies -
 
 ```bash
 yarn 
 
 ```
 
-inicie o front-end -
+start the front-end -
 
 ```bash
 yarn start
 ```
 
 # 
-# Dependências -
+# Dependencies -
 
 
 - **[Docker](https://www.docker.com/get-started/)**
@@ -58,7 +58,7 @@ yarn start
 - **[git](https://git-scm.com/downloads)**
 
 #
-## Bibliotecas -
+## Library -
 - **Axios**
 - **js-sha256**
 - **FontAwesome**
