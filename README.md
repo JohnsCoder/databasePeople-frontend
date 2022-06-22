@@ -26,13 +26,13 @@ See the other part here: **[phone-book-backend](https://github.com/JohnsCoder/da
     - ~~Consume **put** route~~
     - ~~Consume **delete** route~~
 # 
-- **Outros**
+- **Others**
     - ~~Encrypt password~~
     - Add Authentication
 # 
 # Scripts -
 
-Note. to execute all the comands, first check if all **[Dependencies](#dependencies--)** were installed correctly.
+Note: to execute all the comands, first check if all **[Dependencies](#dependencies--)** were installed correctly.
 
 install all project dependencies -
 
