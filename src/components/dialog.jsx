@@ -41,6 +41,10 @@ function CreateDialogWindow(props) {
     setValues({ ...initialValues });
   }
 
+  function cancelValue() {
+    setValues({ ...initialValues });
+    props.closeWindow();
+  }
   return (
     <div className={styles.container} style={{ display: props.display }}>
       <div className={styles.form} style={{ height: "580px" }}>
@@ -91,7 +95,7 @@ function CreateDialogWindow(props) {
           />
         </div>
         <div>
-          <button onClick={props.closeWindow}>
+          <button onClick={cancelValue}>
             <FontAwesomeIcon icon={faX} />
           </button>
           <button onClick={postValue}>
@@ -102,6 +106,24 @@ function CreateDialogWindow(props) {
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function EditDialogWindow(props) {
   const [values, setValues] = useState({
