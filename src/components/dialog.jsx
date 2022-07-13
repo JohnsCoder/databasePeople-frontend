@@ -1,13 +1,24 @@
 import React, { useState } from "react";
-import api from '../services/api'
+import api from "../services/api";
 import styles from "../styles/components/dialog.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus, faX, faTrashCan, faCheck } from "@fortawesome/free-solid-svg-icons";
-import {sha256} from 'js-sha256'
+import {
+  faPlus,
+  faX,
+  faTrashCan,
+  faCheck,
+} from "@fortawesome/free-solid-svg-icons";
+import { sha256 } from "js-sha256";
 
-
+const initialValues = {
+  first_name: "",
+  last_name: "",
+  email: "",
+  salary: "",
+  password: "",
+};
 function CreateDialogWindow(props) {
-  const [values, setValues] = useState();
+  const [values, setValues] = useState({ ...initialValues });
 
   function getValue(prop) {
     setValues((defaultValues) => ({
@@ -23,17 +34,15 @@ function CreateDialogWindow(props) {
       email: values.email,
       salary: values.salary,
       password_hash: sha256(values.password),
-    })
-    props.renderValue()
-    props.renderValue()
+    });
+    props.renderValue();
+    props.renderValue();
     props.closeWindow();
+    setValues({ ...initialValues });
   }
 
   return (
-    <div
-      className={styles.container}
-      style={{ display: props.display }}
-    >
+    <div className={styles.container} style={{ display: props.display }}>
       <div className={styles.form} style={{ height: "580px" }}>
         <div>
           <label>Primeiro Nome:</label>
@@ -42,7 +51,7 @@ function CreateDialogWindow(props) {
             placeholder="Ex. Mario"
             onChange={getValue}
             alt="first_name"
-            defaultValue={""}
+            value={values.first_name}
           />
 
           <label>Ultimo Nome:</label>
@@ -51,7 +60,7 @@ function CreateDialogWindow(props) {
             placeholder="Ex. Júnior"
             onChange={getValue}
             alt="last_name"
-            defaultValue={""}
+            value={values.last_name}
           />
 
           <label>Email:</label>
@@ -60,7 +69,7 @@ function CreateDialogWindow(props) {
             placeholder="Ex. carlos@email.com"
             onChange={getValue}
             alt="email"
-            defaultValue={""}
+            value={values.email}
           />
 
           <label>Salário:</label>
@@ -69,7 +78,7 @@ function CreateDialogWindow(props) {
             placeholder="Ex. 5630"
             onChange={getValue}
             alt="salary"
-            defaultValue={""}
+            value={values.salary}
           />
 
           <label>Senha:</label>
@@ -78,7 +87,7 @@ function CreateDialogWindow(props) {
             placeholder="Ex. 58450matheus"
             onChange={getValue}
             alt="password"
-            defaultValue={""}
+            value={values.password}
           />
         </div>
         <div>
@@ -93,15 +102,6 @@ function CreateDialogWindow(props) {
     </div>
   );
 }
-
-
-
-
-
-
-
-
-
 
 function EditDialogWindow(props) {
   const [values, setValues] = useState({
@@ -134,7 +134,7 @@ function EditDialogWindow(props) {
   }
 
   function delValue() {
-    api.delete(`delUsers/${values.id}`)
+    api.delete(`delUsers/${values.id}`);
     props.renderValue();
     props.renderValue();
     props.closeWindow();
