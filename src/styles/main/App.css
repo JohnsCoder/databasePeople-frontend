@@ -9,6 +9,7 @@
     margin: auto 0 auto 10px;
     font-family: 'Kdam Thmor Pro', sans-serif;
     font-size: 3.5em;
+    color: #FFF;
   
   }
 
@@ -53,7 +54,7 @@ header {
   display: flex;
   height: 95px;
   width: 100%;
-  background-color: #0091AD;
+  background-color: #033F63;
   justify-content: space-between;
 }
 
